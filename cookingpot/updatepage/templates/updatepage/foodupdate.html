@@ -1,0 +1,44 @@
+<!-- register/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>CookingPot | CookingPot Update</title>
+</head>
+<body>
+    <script>
+        {% include "updatepage/foodupdate.js" %}
+    </script>
+
+    <h1>Update Foodlist</h1>
+    <p>
+    ID:
+    <input id="id" name="id" type="text" readonly></input>
+    </p>
+    <p>
+    Name:
+    <input id="name" name="name" type="text"></input>
+    </p>
+    <p>
+    Ingredians:
+    <input id="ingredians" name="Ingredians" type="text"></input>
+    </p>
+    <p>
+    Introduction:
+    <input id="introduction" name="Introduction" type="text"></input>
+    </p>
+    <p>
+    Cooking:
+    <input id="cooking" name="Cooking" type="text"></input>
+    </p>
+    <p>
+    Culture:
+    <input id="culture" name="Culture" type="text"></input>
+    </p>
+
+    <p>
+    <button type="button" onclick="onBackClick()">Back</button>
+    <button type="button" onclick="onSubmitClick()">Submit</button>
+
+    </p>
+</body>
+</html>

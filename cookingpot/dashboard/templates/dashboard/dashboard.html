@@ -1,0 +1,25 @@
+<!-- homepage/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>CookingPot | Home</title>
+</head>
+<body>
+    <script>
+        {% include "dashboard/dashboard.js" %}
+    </script>
+
+    <h1>Dashboard</h1>
+    <p>Welcome to your dashboard, {{ user.first_name }}. Here is the food list</p>
+
+    <br />
+
+    <table style="width:100%" id="food_list"></table>
+
+    <br />
+
+    <!-- <button onclick="onCreateClick();">Create</button> -->
+    <button onclick="onLogoutClick();">Logout</button>
+
+</body>
+</html>

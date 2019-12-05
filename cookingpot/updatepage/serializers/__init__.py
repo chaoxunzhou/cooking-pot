@@ -1,0 +1,1 @@
+from updatepage.serializers.foodlist_update_serializer import FoodlistUpdateSerializer
