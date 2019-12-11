@@ -4,9 +4,6 @@ from foundations.models import FoodList
 
 class DashboardSerializer(serializers.BaseSerializer):
     def to_representation(self, foodlist):
-        """
-        Get the list of instruments and perform our computations.
-        """
         results = []
         for food in foodlist:
             results.append({

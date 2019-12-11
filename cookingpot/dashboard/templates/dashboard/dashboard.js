@@ -7,7 +7,7 @@ function onPageLoadGetDashboardAPI() {
             generateTableFromObject(dataObj);
         }
     }
-    xhttp.open("GET","api/dashboard", true);
+    xhttp.open("GET","{% url 'api/dashboard' %}", true);
     xhttp.send();
 }
 

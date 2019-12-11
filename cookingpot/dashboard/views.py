@@ -18,5 +18,5 @@ class DashboardAPI(views.APIView):
         serializer = DashboardSerializer(foodlist)
         return response.Response(
             status=status.HTTP_200_OK,
-            data=serializer.data
+            data=serializer.data,
         )
