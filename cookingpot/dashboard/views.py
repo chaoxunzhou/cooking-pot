@@ -20,3 +20,34 @@ class DashboardAPI(views.APIView):
             status=status.HTTP_200_OK,
             data=serializer.data,
         )
+
+
+def create_page(request):
+
+    return render(request, "dashboard/createpage.html", {})
+
+
+class CreateAPI(views.APIView):
+    def post_instruments_create_api(request):
+        name = request.POST.get("name")
+        ingredians = request.POST.get("ingredians")
+        introduction = request.POST.get("introduction")
+        cooking = request.POST.get("cooking")
+        culture = request.POST.get("culture")
+        try:
+            foodlist = FoodList.objects.create(
+                name=name,
+                ingredians=ingredians,
+                introduction=introduction,
+                cooking=cooking,
+                culture=culture,
+                user=request.user,
+            )
+            return JsonResponse({
+             'was_created': True,
+            })
+        except Exception as e:
+            return JsonResponse({
+             'was_created': False,
+             'reason': str(e),
+            })

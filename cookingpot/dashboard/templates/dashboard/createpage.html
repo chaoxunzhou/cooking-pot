@@ -1,0 +1,40 @@
+<!-- register/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cooking Pot | Create </title>
+</head>
+<body>
+    <script>
+        {% include "dashboard/createpage.js" %}
+    </script>
+
+    <h1>Create FoodList</h1>
+    <p>
+    Name:
+    <input id="name" name="name" type="text"></input>
+    </p>
+    <p>
+    ingredians:
+    <input id="ingredians" name="ingredians" type="text"></input>
+    </p>
+    <p>
+      introduction :
+    <input id="introduction" name="introduction" type="text"></input>
+    </p>
+    <p>
+      cooking :
+    <input id="cooking" name="cooking" type="text"></input>
+    </p>
+    <p>
+      culture :
+    <input id="culture" name="culture" type="text"></input>
+    </p>
+
+
+    <p>
+    <button type="button" onclick="onCreateClick()">Submit</button>
+    <button type="button" onclick="onBackClick()">Back</button>
+    </p>
+</body>
+</html>

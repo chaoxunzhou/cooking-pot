@@ -7,7 +7,7 @@ function onPageLoadGetDashboardAPI() {
             generateTableFromObject(dataObj);
         }
     }
-    xhttp.open("GET","{% url 'api/dashboard' %}", true);
+    xhttp.open("GET","{% url 'dashboard_apis' %}", true);
     xhttp.send();
 }
 
@@ -15,6 +15,10 @@ onPageLoadGetDashboardAPI();
 
 function onLogoutClick() {
     window.location.href = "{% url 'logout_page' %}";
+}
+
+function onCreateFoodClick() {
+    window.location.href = "{% url 'create_page' %}";
 }
 
 
